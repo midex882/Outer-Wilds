@@ -1,0 +1,928 @@
+@font-face {
+    font-family: outer;
+    src: url("fonts/OnlineWebFonts_COM_6bbbf7e2e0815133c3b3d26f5043cf8a/BrandonGrotesque-BoldItalic/BrandonGrotesque-BoldItalic.ttf");
+}
+
+/* *{
+    border: 1px solid red !important;
+}   */
+
+body{
+    background-image: url("img/back2.jpg");
+    background-size: auto;
+    margin: 0px;
+    background-position: fixed;
+    max-width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+footer{
+    width: 100%;
+    background-color: rgb(3, 11, 20);
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+footer ul{
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(204, 202, 195);
+    font-family: arial;
+}
+footer img{
+    max-width: 2rem;
+}
+footer #enlaces{
+    display: flex;
+}
+#soc ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 0px;
+
+}
+#timber{
+    width: 30%;
+    position: absolute;
+    float: right;
+    bottom: 0px;
+    right: 0px;
+}
+#timber img{
+    width: 100%;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.logo_container{
+    margin-top: 2rem;
+    width: 15%;
+}
+.logo_container.planet{
+    width: 5%;
+}
+.logo_container h1{
+    font-family: "outer";
+    font-size: 1.5em;
+    color: rgb(219, 107, 42);
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+}
+.logo_container img{
+    width: 100%;
+}
+
+#tutorial{
+    opacity: 0;
+    border-radius: 5px;
+    padding: 0.5rem;
+    background: radial-gradient(#f5c413e1, #ec7e08e3);
+	z-index: 4;
+	-webkit-box-shadow: 0 0 2rem radial-gradient(#f5c413, #ec7e08);
+	        box-shadow: 0 0 2rem radial-gradient(#f5c413, #ec7e08);
+    -webkit-animation: SunFire 4s infinite alternate;
+            animation: SunFire 4s infinite alternate;
+    font-family: "outer";
+    font-size: 1.5em;
+    transition: opacity 0.3s ease;
+    margin-bottom: 2rem;
+}
+#tutorial.show{
+    opacity: 1;
+}
+
+
+#sun {
+	background: radial-gradient(#F5C313, #EC7E08);
+	position: absolute;
+	z-index: 4;
+	-webkit-box-shadow: 0 0 50px #F5C91A;
+	        box-shadow: 0 0 50px #F5C91A;
+	top: 50%;
+	left: 50%;
+	border-radius: 100%;
+	margin-top: -100px;
+	margin-left: -100px;
+	-webkit-animation: SunFire 4s infinite alternate;
+	        animation: SunFire 4s infinite alternate;  
+}
+
+/* .sun{
+    position: absolute;
+    margin: auto;
+    top: 50%;
+    width: 10rem;
+    display: table-cell;
+    vertical-align: middle;
+} */
+.sun img{
+    width: 10rem;
+}
+
+.orbit{
+    margin-top: 3rem;
+    display: block;
+}
+
+.orbit-wrap {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vh;
+    height: 90vh;
+    background-image: url("img/sun.png");
+    background-size: 15vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+.ring img{
+    width: 6rem;
+}
+.ring.sun{
+    display: none;
+}
+
+div.ring {
+    height: 6rem;
+    padding: 0; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    transition: all 300ms ease-in-out;
+}
+.ring-0{
+    width: 25vw;
+    animation: clockwiseRotate 6s linear infinite;
+    animation-delay: -1s;
+
+}
+.ring a{
+    width: 6rem;
+}
+.ring-1{
+    width: 33%;
+    animation: clockwiseRotate 8s linear infinite;
+    animation-delay: -5s;
+
+}
+.ring-2{
+    width: 39%;
+    animation: clockwiseRotate 10s linear infinite;
+    animation-delay: -8s;
+
+}
+.ring-3{
+    width: 45%;
+    animation: clockwiseRotate 12s linear infinite;
+    animation-delay: -10s;
+
+}
+.ring-4{
+    width: 51%;
+    animation: clockwiseRotate 14s linear infinite;
+    animation-delay: -10s;
+
+}
+
+/* PLANETS */
+.planet_main{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.planet_h1, .planet_h2{
+    font-family: outer;
+    padding: 2rem;
+}
+/*TIMBER HEARTH*/
+#timber_body{
+    background-image: url("img/timber_back8.png");
+}
+
+.planet_header{
+    box-sizing: border-box;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: flex-start;
+}
+.presentation{
+    width: 100%;
+    background-color: rgba(56, 43, 43, 0.26);
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+}
+.presentation_opening{
+    width: 60%;
+    font-family: outer;
+    color: rgb(204, 202, 195);
+    font-size: 2em;
+    padding: 1rem;
+}
+.presentation .presentation_figure{
+    width: 20%;
+}
+.presentation .presentation_figure img{
+    width: 100%;
+}
+
+.radial_menu{
+    margin-top: 6rem;
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows:  repeat(5, auto);
+/*     border-radius: 100%;
+    background-color: rgba(56, 43, 43, 0.493); */
+}
+.menu_top_left{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.menu_top_right{
+    grid-row: 1/2;
+    grid-column: 4/5;
+}
+.menu_center_left{
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+.menu_center_right{
+    grid-row: 3/4;
+    grid-column: 5/6;
+}
+.menu_bottom_left{
+    grid-row: 5/6;
+    grid-column: 2/3;
+}
+.menu_bottom_right{
+    grid-row: 5/6;
+    grid-column: 4/5;
+}
+.center{
+    grid-row: 3/4;
+    grid-column: 3/4;
+}
+.radial_menu div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.radial_menu img{
+    width: 100%;
+}
+.radial_menu_text{
+    display: block;
+    color: rgb(204, 202, 195);
+    font-family: outer;
+    font-size: 1.5em;
+}
+
+.separator{
+    width: 99vw;
+    box-sizing: border-box;
+    height: 10vh;
+    background: url("img/timber_wood_texture.jpg");
+    background-size: 20%;
+}
+
+.timber_background_overlay{
+    margin-top: 20rem;
+    width: 99vw;
+    box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+.timber_background_overlay div:has(img)
+{
+    width: 100%;
+    margin-bottom: -1rem;
+}
+.timber_background_overlay img{
+    width: 100%;
+}
+
+.timber_text_overlay{
+    width: 80vw;
+    margin: auto;
+    text-align: center;
+    color: rgb(204, 202, 195);
+    font-family: outer;
+    font-size: 2em;
+}
+
+.planet_h2.timber{
+    background: url("img/timber_wood_texture.jpg");
+    background-size: 50%;
+    font-size: 1em;
+    color: rgb(204, 202, 195);
+}
+.planet_h1.timber{
+    background: url("img/timber_wood_texture.jpg");
+    background-size: 50%;
+    color: rgb(204, 202, 195);
+    margin-bottom: 0px;
+}
+main section{
+    max-width: 98vw;
+}
+.end_times{
+    width: 90vw;
+    background-image: url("img/back2.jpg");
+    display: flex;
+    justify-content: center;
+}
+.end_times img{
+    width: 50%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+
+
+/*BRITTLE HOLLOW*/
+#brittle_body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.brittle_container{
+    height: 40vh;
+    width: 80vw;
+    margin: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 5s linear;
+    position: absolute;
+    display: flex;
+}
+
+.tower{
+    height: 40vh;
+}
+.brittle_container.quantumTower{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    background-color:rgba(80, 10, 46, 0.567);
+    padding: 0rem 1rem;
+    grid-gap: 1rem;
+}
+.brittle_container.quantumTower p,.brittle_container.forge p{
+    color: white;
+    font-family: outer;
+    font-size: 1.5em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.brittle_container.quantum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(82, 78, 130, 0.568);
+}
+.quantum_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    grid-template-rows: auto;
+    align-items: center;
+}
+.brittle_container.quantum p{
+    color: white;
+    font-family: outer;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 0.25rem;
+}
+.quantum_container img{
+    height: 30vh;
+    display: flex;
+    align-items: center;
+}
+
+.brittle_container.forge{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    background-color:rgba(0, 68, 114, 0.567);
+    padding: 0rem 1rem;
+    grid-gap: 1rem;
+}
+.tower img{
+    height: 100%;
+}
+
+h1.brittle{
+    color: white;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+h2.brittle{
+    color: white;
+    padding: 0.25rem;
+}
+
+.riebeck{
+    width: 40%;
+    object-fit: contain;
+    position: relative;
+    max-height: 40vh;
+}
+.riebeck img{
+    width: 100%;
+}
+
+.planet_main.brittle{
+    width: 100%;
+    margin: 0px;
+    background-image: url("img/blackHole4.gif");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+
+/*GIANT'S DEEP */
+.giantHeader{
+    background-color: rgba(99, 121, 0, 0.226);
+}
+
+#giant_body main section{
+    width: 100%;
+    max-width: none;
+}
+
+#giant_body{
+    width: 100%;
+    margin: 0px;
+    background-size: 100%; 
+    background-image: url("img/h1_giant_back.png");
+   
+}
+#giant_body main{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.surface{
+    width: 100%;
+    background-image: url("img/giant_surface_back.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentation.giant{
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.presentation_opening.giant{
+    background-color: rgba(73, 75, 53, 0.719);
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.over{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 54, 63, 0.644);
+    width: 100%;
+}
+.over_ship{
+    width: 20%;
+}
+.over_ship img{
+    width: 100%;
+}
+
+.core{
+    width: 100%;
+    background-color: #19251f;
+    display: flex;
+    justify-content: center;
+
+
+}
+.core p, .current p{
+    color: white;
+    display: flex;
+    align-items: center;
+    font-family: outer;
+    font-size: 2em;
+    padding: 2rem 0px;
+}
+.core p{
+    width: 50%;
+}
+.core_jellyfish{
+    color: white;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.core_jellyfish img{
+    width: 100%;
+}
+.over p{
+    color: white;
+    font-family: outer;
+    font-size: 2em;
+}
+
+.planet_h1.giant{
+    background-size: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+    background-color: rgba(12, 94, 90, 0.534);
+    width: 40%;
+}
+
+.planet_h2.giant{
+    background-size: 100%;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    background-color: rgba(12, 94, 90, 0.534);;
+    width: 40%;
+}
+
+.flying_islands{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+    grid-template-rows: auto;
+    box-sizing: border-box;
+
+    margin-top: 5rem;
+}
+
+.flying_islands div:nth-child(1)
+{
+    grid-column: 2/3;
+}
+.flying_islands div:nth-child(2)
+{
+    grid-column: 4/5;
+}
+
+.flying_islands .island{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flying_islands .island img{
+    width: 100%;
+}
+
+.island.shoot{
+    animation: shoot_island;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+.island.return{
+    animation: return_island;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+}
+.flying_islands .island img{
+    width: 100%;
+}
+
+
+/*HOURGLASS TWINS*/
+h1.twins{
+    color: white;
+}
+.twins{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: outer;
+}
+.presentation.twins{
+    background-color: transparent;
+    font-size: 2em;
+}
+.twins p{
+    font-size: 1.5em;
+    padding: 1rem;
+}
+.ember{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: rgb(51, 19, 0);
+    box-sizing: border-box;
+}
+.ember p, h2{
+    color: white;
+}
+h2.ash{
+    color: black;
+}
+.ember p{
+    padding: 1rem;
+}
+.ash{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: rgb(221, 193, 152);
+    box-sizing: border-box;
+}
+.planet_main.hourglass{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/*ANIMATIONS */
+@keyframes clockwiseRotate {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes counterClockwiseRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+
+@keyframes SunFire {
+	from {-webkit-box-shadow: 0 0 50px #F5C91A;box-shadow: 0 0 50px #F5C91A;}
+	to {-webkit-box-shadow: 0 0 100px #F5C91A;box-shadow: 0 0 100px #F5C91A;}	
+}
+
+@keyframes shoot_island{
+    0%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: -300rem;
+    }
+}
+
+@keyframes return_island{
+    0%{
+        margin-top: -300rem;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+
+/* RESPONSIVE */
+
+
+@media (max-width:451px)
+{
+    /* .logo_container{
+        width: 50%;
+    }
+    .orbit .orbit-wrap{
+        width: 100%;
+        margin-bottom: 10rem;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+    }
+    .orbit .orbit-wrap .ring{
+        width: 100%;
+        animation: none;
+        position: static;
+        justify-content: center;
+        height: auto;
+        margin: 1rem;
+    }
+    .orbit .orbit-wrap .ring a{
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+    .orbit .orbit-wrap .ring img{
+        position: static;
+    }
+
+    body #logo_container{
+        width: 70%;
+    }
+    .orbit .orbit-wrap .ring.sun{
+        display: flex;
+        width: 9rem;
+    } */
+
+    /* PLANETS */
+
+    .logo_container.planet{
+        width: 20%;
+    }
+
+    /*TIMBER HEARTH */
+    .planet_h1{
+        font-size: 1.5em;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    .planet_h2{
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+    .presentation{
+        flex-direction: column-reverse;
+    }
+    .presentation p.presentation_opening{
+        width: 100%;
+        font-size: 1.5em;
+        text-align:center;
+    }
+    .presentation .presentation_figure{
+        width: 100%;
+    }
+    .radial_menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .radial_menu .center{
+        margin-bottom: 3rem;
+    }
+    .separator{
+        background-size: 60%;
+        z-index: 8;
+    }
+
+    /* TWINS */
+
+    .presentation.twins{
+        display: flex;
+        align-items: center;
+    }
+
+    section.twins{
+        flex-direction: column;
+    }
+
+    section.twins article{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .planet_h2.ember{
+        font-size: 2em;
+    }
+
+    /*GIANTS DEEP*/
+
+    #giant_body .end_times{
+        width: 100%;
+    }
+
+
+
+
+}
+
+@media (max-width:1000px)
+{
+        /*BRITTLE*/
+
+         main section.brittle_container{
+            position: static;
+            height:auto;
+            width: 80%;
+            margin: 2rem;
+            display: flex !important;
+            flex-direction: column;
+        }
+
+        .planet_main.brittle{
+            width: 100%;
+            margin: 0px;
+            background-image: url("img/blackHole4.gif");
+            background-position: center;
+            background-size: auto;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .planet_main.brittle .end_times{
+            position: static;
+        }
+
+        .tower{
+            position: static;
+            height: auto;
+            width: 100%
+        }
+
+        .planet_main.brittle .presentation_opening{
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .planet_main.brittle .presentation{
+            box-sizing: border-box;
+        }
+
+        .planet_main.brittle .presentation_figure{
+            width: 100%;
+        }
+
+        .tower img{
+            height: auto;
+            width: 100%;
+        }
+        .quantum_container img{
+            height: auto;
+            width: 100%;
+        }
+        .end_times{
+
+        }
+}
+
+@media(max-width: 1200px)
+{
+    .logo_container{
+        width: 50%;
+    }
+    .orbit .orbit-wrap{
+        width: 100%;
+        margin-bottom: 10rem;
+        flex-direction: column;
+        align-items: center;
+        background-image: none;
+    }
+    .orbit .orbit-wrap .ring{
+        width: 100%;
+        animation: none;
+        position: static;
+        justify-content: center;
+        height: auto;
+        margin: 1rem;
+    }
+    .orbit .orbit-wrap .ring a{
+        width: 100%;
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+    .orbit .orbit-wrap .ring img{
+        position: static;
+    }
+
+    body #logo_container{
+        width: 70%;
+    }
+    .orbit .orbit-wrap .ring.sun{
+        display: flex;
+        width: 9rem;
+    }
+}
